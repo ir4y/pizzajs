@@ -1,176 +1,736 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Куда мы все катимся?</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/material/styles/screen-16x10.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+        <style>
+          .float-right {
+            text-align: right;
+            width: 100%;
+            display: block;
+            margin-bottom: 0em!important;
+          }
+          .selected-line {
+            background-color: #4caf50!important;
+          }
+          pre.miltiline-code code:before {
+            content:none!important;
+          }
+          pre.miltiline-code code {
+          }
+          .angular {
+            font-size: 20px!important;
+            line-height: 1.5!important;
+          }
+          .slide:after {
+            right: 96px!important;
+            left: auto!important;
+          }
+          img.title-image {
+             height: 120px;
+             float: right;
+          }
+        </style>
+
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <body class="shower list">
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Куда мы все катимся?</h1>
+		<p>Беда Илья, bro.agency</p>
 	</header>
 	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<img src="pictures/cover.jpg" alt="" class="cover">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
+		<h2>Куда мы все катимся?</h2>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+		<p class="float-right"><a href="https://github.com/ir4y">Беда Илья</a></p>
+		<p class="float-right"><a href="http://bro.agency/">bro.agency</a></p>
 	</section>
 	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+		<h2>Кто я?</h2>
+                <ul>
+                    <li>Тимлид и один из основателей bro.agency </li>
+                    <li>Разрабатываю веб-формочки на python в течении 7 лет</li>
+                    <li>Продвигаю функциональное программирование в массы</li>
+                    <li>Провожу воркшопы и мастер-классы</li>
+                </ul>
 	</section>
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+		<h2>Про что доклад?</h2>
+              <ul>
+                  <li>JavaScript сейчас на гребне волны</li>
+                    <li>Я расскажу свой личный опыт. Свое видение индустрии.</li>
+                    <li>Расскажу о причинах по которым произошел такой бурный рост JavaScript</li>
+                    <li>Расскажу о проблемах и возможном пути решения</li>
+                </ul>
 	</section>
 	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+		<h2>Когда то давно все было просто.</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;
+  $(document).ready(function() {
+    $(".fancybox").fancybox();
+  });
+&lt;/script&gt;
+                </code>
+                </pre>
+
 	</section>
 	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
+		<h2>Когда то давно все было просто.</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;
+  $(document).ready(function() {</code>
+  <code class="javascript html selected-line">    $(".fancybox").fancybox();</code><code class="javascript html">  });
+&lt;/script&gt;
+                </code>
+                </pre>
+
 	</section>
 	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
+		<h2>Потом стало немного сложнее</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;
+  $(document).ready(function() {
+    $("p").click(function() {
+      $(this).slideUp();
+    });
+  });
+&lt;/script&gt;
+                </code>
+                </pre>
+
 	</section>
 	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
+		<h2>Потом стало немного сложнее</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;
+  $(document).ready(function() {</code><code class="javascript xml selected-line">    $("p").click(function() {
+      $(this).slideUp();
+    });</code><code class="javascript xml">  });
+&lt;/script&gt;
+                </code>
+                </pre>
+
 	</section>
 	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
+                <h2>Дальше появилась динамика.</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;
+  $.get("ajax/test.html", function(data) {
+    $(".result").html(data);
+    alert("Load was performed.");
+  });
+&lt;/script&gt;
+                </code>
+                </pre>
 	</section>
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
+                <h2>Когда браузеры стали еще мощнее. Все начали писать сложные интерфейсы.</h2>
+                <ul>
+                  <li>2009 - Mozilla Firefox 3.5 TraceMonkey(SpiderMonkey)</li>
+                  <li>2019 - Mozilla Firefox 4.0 JägerMonkey</li>
+                </ul>
+                <img style="margin-left: 20%;" src="pictures/firefox-benchmark.png"/>
+	</section>
+
+        <section class="slide">
+                <h2>И все продлжили использовать JQuery</h2>
+                <img style="margin-left: 30%;" src="pictures/facepalm-captain.png"/>
+	</section>
+        <section class="slide">
+                <br/>
+                <br/>
+                <br/>
+                <h2>И кто знает почему JQuery плох для больших фронтенд проектов со сложной логикой?</h2>
+	</section>
+        <section class="slide">
+                <h2>Проблемы JQuery</h2>
+                <ul>
+                  <li>Не задает структуру проекта</li>
+                  <li>Не задает архитектуру приложения</li>
+                  <li>Набор низкоуровневых императивных примитивов</li>
+                  <li>Нет единого мнения ка делать праивльно</li>
+                  <li>Сильно много степеней свободы</li>
+                </ul>
+	</section>
+        <section class="slide">
+          <br/>
+          <h2>Крупные компании с опытом сразу это понимали.</h2>
+          <h2>Они делали внутренние фреймворки для создания фронтенда.</h2>
 	</section>
 	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
+                <h2>Нельзя написать сложный фронтенд на JQuery без подготовки</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;
+  ...
+  $('a.tra.papa').unbind('click');
+  $('a.tra.papa').bind(doSomething);
+  ...
+&lt;/script&gt;
+                </code>
+                </pre>
 	</section>
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
+	<section class="slide">
+                <h2>Но нельзя написать сложный фронтенд на JQuery без подготовки</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;
+  ...</code><code class="javascript xml selected-line">  $('a.tra.papa').unbind('click');</code><code class="javascript xml">  $('a.tra.papa').bind(doSomething);
+  ...
+&lt;/script&gt;
+                </code>
+                </pre>
 	</section>
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
+	<section class="slide">
+                <h2>Но нельзя написать сложный фронтенд на JQuery без подготовки</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;
+  ...
+  $('a.tra.papa').unbind('click');</code><code class="javascript xml selected-line">  $('a.tra.papa').bind(doSomething);</code><code class="javascript xml">  ...
+&lt;/script&gt;
+                </code>
+                </pre>
 	</section>
+	<section class="slide">
+                <h2>Копромисы на бэкэнде</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">{% for fset, cap, tid in study_formsets.fset_cap_tid %}
+  $(function() {
+    $('.form_container_{{ tid }}').formset({
+        prefix: '{{ fset.prefix }}',
+        formCssClass: '{{ tid }}',
+        extraClasses: ['myrow1', 'myrow2']
+    });
+  });
+{% endfor %}
+                </code>
+                </pre>
+	</section>
+        <section class="slide">
+          <br/>
+          <br/>
+          <h2>У кого был legacy проект на JQuery который хотелось быстрее забросить?</h2>
+	</section>
+        <section class="slide">
+          <h2>Самые стойкие извлекли урок и начали делать фронтенд подругому</h2>
+          <img style="width: 80%; margin-left: 10%;"  src="pictures/lamp.png"/>
+	</section>
+        <section class="slide">
+          <h2>backbone.js <img class="title-image" src="pictures/backbone.png"/></h2>
+          <ul>
+            <li>Шаблонизатор</li>
+            <li>Не дает архитектуру</li>
+            <li>Позволяет взять за основу MVC</li>
+          </ul>
+	</section>
+        <section class="slide">
+          <h2>marionettejs <img class="title-image" src="pictures/marionette_logo.png"/></h2>
+          <ul>
+            <li>Архитектура</li>
+            <li>Набор хэлперов для backbone.js</li>
+            <li>Data-Binding</li>
+          </ul>
+	</section>
+        <section class="slide">
+          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+          <ul>
+            <li>Больше логики и структуры</li>
+            <li>Все включено</li>
+            <li>Полноценный фронтенд фреймворк</li>
+          </ul>
+	</section>
+
+	<section class="slide">
+          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+                <pre class="miltiline-code angular">
+                <code class="angular javascript xml">&lt;!doctype html&gt;
+&lt;html ng-app&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;scripts/angular.1.5.3.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;label&gt;Name:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; ng-model=&quot;yourName&quot; placeholder=&quot;Enter a name here&quot;&gt;
+      &lt;hr&gt;
+      &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+	</section>
+
+	<section class="slide">
+          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+                <pre class="miltiline-code angular">
+                <code class="angular javascript xml">&lt;!doctype html&gt;
+&lt;html ng-app&gt;
+  &lt;head&gt;</code><code class="angular javascript xml selected-line">    &lt;script src=&quot;scripts/angular.1.5.3.min.js&quot;&gt;&lt;/script&gt;</code><code class="angular javascript xml">  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;label&gt;Name:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; ng-model=&quot;yourName&quot; placeholder=&quot;Enter a name here&quot;&gt;
+      &lt;hr&gt;
+      &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+	</section>
+
+	<section class="slide">
+          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+                <pre class="miltiline-code angular">
+                <code class="angular javascript xml">&lt;!doctype html&gt;
+&lt;html ng-app&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;scripts/angular.1.5.3.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;label&gt;Name:&lt;/label&gt;</code><code class="angular javascript xml selected-line">      &lt;input type=&quot;text&quot; ng-model=&quot;yourName&quot; placeholder=&quot;Enter a name here&quot;&gt;</code><code class="angular javascript xml">      &lt;hr&gt;
+      &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+	</section>
+
+	<section class="slide">
+          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+                <pre class="miltiline-code angular">
+                <code class="angular javascript xml">&lt;!doctype html&gt;
+&lt;html ng-app&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;scripts/angular.1.5.3.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;label&gt;Name:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; ng-model=&quot;yourName&quot; placeholder=&quot;Enter a name here&quot;&gt;
+      &lt;hr&gt;</code><code class="angular javascript xml selected-line">      &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;</code><code class="angular javascript xml">    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+	</section>
+
+
+
+        <section class="slide">
+          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+          <ul>
+            <li>Код из примеров и документации - неподходит для реальных проектов</li>
+            <li>Много магии которую ты не понимаешь</li>
+            <li>А с определенного момента не зная эту магию нельзя создавать эффективные приложения</li>
+          </ul>
+	</section>
+        <section class="slide">
+          <h2>React <img class="title-image" src="pictures/react.png"/></h2>
+          <ul>
+            <li>Функциональный подход к фронтенду</li>
+            <li>Фронтенд как чистая функция от состояния</li>
+          </ul>
+	</section>
+        <section class="slide">
+          <h2>Фронтенд как чистая функция от состояния</h2>
+          <br/>
+          <img style="width: 100%;" src="pictures/ui_as_f_of_state_1.png" />
+	</section>
+        <section class="slide">
+          <h2>Фронтенд как чистая функция от состояния</h2>
+          <br/>
+          <img style="width: 100%;" src="pictures/ui_as_f_of_state_2.png" />
+	</section>
+        <section class="slide">
+          <h2>Фронтенд как чистая функция от состояния</h2>
+          <br/>
+          <img style="width: 100%;" src="pictures/ui_as_f_of_state_3.png" />
+	</section>
+
+
+
+        <section class="slide">
+          <h2>React открыл дверь функциональному миру</h2>
+          <p>
+            Виртуальный дом решил проблему производительности что позволело принести простые концепции RX
+          </p>
+	</section>
+        <section class="slide">
+          <h2>Webcomponents<img class="title-image" src="pictures/webcomponents.png"/></h2>
+          <p>
+            Создатели браузеров знаю как делать фронтенд и предлогают свою концепцию компонетного подхода в вебе.
+          </p>
+	</section>
+        <section class="slide">
+          <h2>Angular2<img style="backgound-color: blue;" class="title-image" src="pictures/angular2.png"/></h2>
+          <p>Это абсолютно новый фремйворк</p>
+          <p>Предлогаю изначально пользоваться TypeScript</p>
+	</section>
+
+        <section class="slide">
+          <h2>Gradual typing</h2>
+          <p>
+            Недостаточно писать код на императивном языке со слабой динамической типизацией
+          </p>
+          <p>
+            Нужно больше гарантий - нужна система типов
+          </p>
+          <ul>
+            <li>Typescript</li>
+            <li>Flow</li>
+          </ul>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Почему идет такой стремительный рост и развитие фронтенда
+          </h2>
+          <img style="width: 100%;" src="pictures/question.png"/>
+	</section>
+
+
+        <section class="slide">
+          <br/>
+          <h2>
+            Достаточно освоить JavaScript и ты можешь писать фулстек приложения и оптимизировать свой рабочий процесс.
+          </h2>
+	</section>
+
+        <section class="slide">
+          <h2>node.js</h2>
+          <p>полностью гомогенная структура</p>
+          <p>В отличии от:</p>
+          <ul>
+            <li>C/C++ и Makefile</li>
+            <li>Android и gradle</li>
+          </ul>
+	</section>
+
+        <section class="slide">
+          <h2>node.js</h2>
+          <ul>
+            <li>Grunt</li>
+            <li>Gulp</li>
+            <li>Babel</li>
+            <li>Webpack</li>
+          </ul>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Но все ли так хорошо
+          </h2>
+          <img style="width: 100%;" src="pictures/question.png"/>
+	</section>
+
+
+        <section class="slide">
+          <h2 style="font-size: 60px;">
+            Быстрорастущая индустрия создает проблемы.
+          </h2>
+          <img style="width: 100%; position: absolute; top: 35px; left: 0px; z-index: -1;" src="pictures/trouble.png"/>
+	</section>
+
+        <section class="slide">
+          <h2>Проблемы зависимометей и менеджера зависимостей.</h2>
+          <p>Замеры проводилиcь для проекта</p>
+          <ul>
+            <li>ES2015</li>
+            <li>Sass</li>
+            <li>Утилиты оптимизации изображений</li>
+            <li>Окружение для запуска тестов</li>
+          </ul>
+	</section>
+
+        <section class="slide">
+          <h2>
+            npm -> npm2 -> npm3
+          </h2>
+          <ul>
+            <li>npm 1</li>
+            <li>npm 2</li>
+            <li>npm 3</li>
+          </ul>
+	</section>
+        <section class="slide">
+          <h2>
+            npm -> npm2 -> npm3
+          </h2>
+          <ul>
+            <li>npm 1 &mdash; dependancy hell</li>
+            <li>npm 2</li>
+            <li>npm 3</li>
+          </ul>
+        </section>
+
+        <section class="slide">
+          <h2>
+            Dependancy hell
+          </h2>
+          <img style="width: 100%;" src="pictures/dependancy_hell.png" />
+	</section>
+
+        <section class="slide">
+          <h2>
+            npm -> npm2 -> npm3
+          </h2>
+          <ul>
+            <li>npm 1 &mdash; dependancy hell</li>
+            <li>npm 2</li>
+            <li>npm 3</li>
+          </ul>
+	</section>
+
+        <section class="slide">
+          <h2>
+            npm -> npm2 -> npm3
+          </h2>
+          <ul>
+            <li>npm 1 &mdash; dependancy hell</li>
+            <li>npm 2 &mdash; 1,5 GB зависимостей в node_modules</li>
+            <li>npm 3</li>
+          </ul>
+	</section>
+        <section class="slide">
+          <h2>
+            npm -> npm2 -> npm3
+          </h2>
+          <ul>
+            <li>npm 1 &mdash; dependancy hell</li>
+            <li>npm 2 &mdash; 1,5 GB зависимостей в node_modules</li>
+            <li>npm 3 &mdash; долгая установка 40 минут разворачивание проекта с нуля.</li>
+          </ul>
+	</section>
+        <section class="slide">
+          <h2>
+            npm -> npm2 -> npm3
+          </h2>
+          <ul>
+            <li>npm 1 &mdash; dependancy hell</li>
+            <li>npm 2 &mdash; 1,5 GB зависимостей в node_modules</li>
+            <li>npm 3 &mdash; долгая установка 40 минут разворачивание проекта с нуля.</li>
+            <li><span style="color: #fff">npm 3 </span>&mdash; если жестко фиксировать версии работает как npm2</li>
+          </ul>
+	</section>
+
+        <section class="slide">
+          <h2>
+            ReactRouter v1.0.2
+          </h3>
+          <p>Минорное изменение в history с 1.12 на 1.13  сломало ReactRouter</p>
+          <p>Разработчики не всегда следуют спецификации semver</p>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Старые зависимости.
+          </h2>
+	</section>
+
+        <section class="slide">
+          <h2>
+            React Native
+          </h2>
+          <p>Проект начали в ноябре на react-native 0.13.0</p>
+          <p>В процессе разработки обновились до 0.15.0 дальше не получилось</p>
+          <p>Закончили активную разработку при 0.19.0</p>
+          <p>Сейчас 0.23.0</p>
+	</section>
+
+        <section class="slide">
+          <h2>
+            React Native
+          </h2>
+          <p>Проект начали в ноябре на react-native 0.13.0</p>
+          <p>В процессе разработки обновились до 0.15.0 дальше не получилось</p>
+          <p>Закончили активную разработку при 0.19.0</p>
+          <strong>Сейчас 0.24.1</strong>
+	</section>
+
+        <section class="slide">
+          <h2>Баги на этапе установки зависимосетей</h2>
+          <img src="pictures/fork.png"/>
+	</section>
+        <section class="slide">
+          <h2>Баги на этапе установки зависимосетей</h2>
+          <img src="pictures/fork_2.png"/>
+	</section>
+        <section class="slide">
+          <h2>Баги на этапе установки зависимосетей</h2>
+          <img src="pictures/fork_3.png"/>
+	</section>
+        <section class="slide">
+          <h2>Баги на этапе установки зависимосетей</h2>
+          <img src="pictures/fork_4.png"/>
+	</section>
+
+        <section class="slide">
+          <h2>Новый стек - новый toolset</p>
+          <img style="width: 100%;" src="pictures/toolset.png"/>
+	</section>
+
+        <section class="slide">
+          <h2>Иммутабельные данные в мутабельном языке</h2>
+          <img style="width: 100%;" src="pictures/hammer.png"/>
+	</section>
+
+        <section class="slide">
+          <h2>Иммутабельные данные в мутабельном языке</h2>
+          <img style="width: 100%;" src="pictures/nail.png"/>
+	</section>
+
+
+        <section class="slide">
+          <h2>
+            Gradual typing
+          </h2>
+          <img style="width: 100%;" src="pictures/window.png"/>
+	</section>
+        <section class="slide">
+          <h2>
+            Gradual typing
+          </h2>
+          <img style="width: 100%;" src="pictures/window_2.png"/>
+	</section>
+        <section class="slide">
+          <h2>
+            Gradual typing
+          </h2>
+          <img style="width: 100%;" src="pictures/window_3.png"/>
+	</section>
+        <section class="slide">
+          <h2>
+            Gradual typing
+          </h2>
+          <img style="width: 100%;" src="pictures/window_4.png"/>
+	</section>
+
+        <section class="slide">
+          <h2 style="font-size: 60px">
+            <br/>
+            <br/>
+            <br/>
+            “Головокружение от успехов”
+          </h2>
+	</section>
+
+
+        <section class="slide">
+          <h2>
+            Цекличность мира
+          </h2>
+          <p>
+            Мы пытаемся использовать старые добрые инструменты для решения новых задач более высокого уровня
+          </p>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Цекличность мира
+          </h2>
+          <p>
+            Но это уже с нами было
+          </p>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Цекличность мира
+          </h2>
+          <p>
+            Мы имеем проблемы аналогичные тем что были у JQuery но на уровне инфрастукрутры и языка
+          </p>
+	</section>
+
+        <section class="slide">
+          <h2>
+            И что же нам делать ?
+          </h2>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Elm
+          </h2>
+          <img style="margin-left: 20%;" src="pictures/elm.png"/>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Elm
+          </h2>
+          <ul>
+            <li>Изначально ориентирован на фронтенд</li>
+            <li>Статическои типизированный с автоматическим выводом типов</li>
+            <li>Свой менеджер пакетов</li>
+            <li>Интеграция с webpack и React</li>
+            <li>Интегация с JavaScript runtime</li>
+          </ul>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Изначально ориентирован на фронтенд
+          </h2>
+          </ul>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Статическои типизированный с автоматическим выводом типов
+          </h2>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Свой менеджер пакетов
+          </h2>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Интеграция с webpack и React
+          </h2>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Интегация с JavaScript runtime
+          </h2>
+	</section>
+
+        <section class="slide">
+          <h2>
+            Время для вопросов
+          </h2>
+          <br/>
+          <br/>
+          <br/>
+          <p>Илья Беда <a href="mailto:ilya@bro.agency">ilya@bro.agency</a></p>
+          <p><a href="http://bro.agency">bro.agency</a></p>
+	</section>
+
+
 	<p class="badge">
 		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
 	</p>
