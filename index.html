@@ -139,6 +139,30 @@
                 </pre>
 	</section>
 	<section class="slide">
+                <h2>Дальше появилась динамика</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;</code><code class="javascript xml selected-line">  $.get("ajax/test.html", function(data) {</code><code class="javascript xml">    $(".result").html(data);
+    alert("Load was performed.");
+  });
+&lt;/script&gt;
+                </code>
+                </pre>
+	</section>
+	<section class="slide">
+                <h2>Дальше появилась динамика</h2>
+                <pre class="miltiline-code">
+                <code class="javascript xml">
+&lt;script type="text/javascript"&gt;
+  $.get("ajax/test.html", function(data) {</code><code class="javascript xml selected-line">    $(".result").html(data);</code><code class="javascript xml">    alert("Load was performed.");
+  });
+&lt;/script&gt;
+                </code>
+                </pre>
+	</section>
+
+
+	<section class="slide">
                 <h2>Браузеры стали еще быстрее</h2>
                 <ul>
                   <li>2009 &mdash; Mozilla Firefox 3.5 TraceMonkey(SpiderMonkey)</li>
@@ -186,7 +210,7 @@
                 </pre>
 	</section>
 	<section class="slide">
-                <h2>Но нельзя написать сложный фронтенд на JQuery без подготовки</h2>
+                <h2>Нельзя написать сложный фронтенд на JQuery без подготовки</h2>
                 <pre class="miltiline-code">
                 <code class="javascript xml">
 &lt;script type="text/javascript"&gt;
@@ -197,7 +221,7 @@
                 </pre>
 	</section>
 	<section class="slide">
-                <h2>Но нельзя написать сложный фронтенд на JQuery без подготовки</h2>
+                <h2>Нельзя написать сложный фронтенд на JQuery без подготовки</h2>
                 <pre class="miltiline-code">
                 <code class="javascript xml">
 &lt;script type="text/javascript"&gt;
@@ -406,6 +430,7 @@
           <h2>
             Развитие идет колоссальными темпами
           </h2>
+          <img style="width: 100%" src="pictures/rocket.png"/>
 	</section>
 
 
@@ -461,6 +486,7 @@
 
         <section class="slide">
           <h2>Проблемы зависимостей и менеджера пакетов</h2>
+          <img src="pictures/deps.png" style="width: 100%"/>
 	</section>
 
         <section class="slide">
@@ -545,6 +571,7 @@
           <h2>
             Старые зависимости
           </h2>
+          <img src="pictures/fish.png" style="width: 100%;"/>
 	</section>
 
         <section class="slide">
@@ -683,7 +710,7 @@
             <li>Статически типизированный с автоматическим выводом типов</li>
             <li>Изначально ориентирован на фронтенд</li>
             <li>Свой менеджер пакетов</li>
-            <li>Интегация с JavaScript</li>
+            <li>Интеграция с JavaScript</li>
             <li>Интеграция с webpack и React</li>
           </ul>
 	</section>
@@ -734,7 +761,7 @@
 	</section>
         <section class="slide">
           <h2>
-            Интегация с JavaScript runtime
+            Интеграция с JavaScript runtime
           </h2>
           <a href="http://elm-lang.org/guide/interop">Elm interop guide</a>
           <pre class="miltiline-code">
@@ -748,6 +775,51 @@ stamps.ports.count.subscribe(function(count) {
           </code>
           </pre>
 	</section>
+        <section class="slide">
+          <h2>
+            Интеграция с JavaScript runtime
+          </h2>
+          <a href="http://elm-lang.org/guide/interop">Elm interop guide</a>
+          <pre class="miltiline-code">
+          <code class="javascript">
+var div = document.getElementById('elm-stamps');</code><code class="javascript selected-line">var stamps = Elm.embed(Elm.Stamps, div, { reset:[] });</code><code class="javascript">stamps.ports.reset.send([]);
+stamps.ports.count.subscribe(function(count) {
+  console.log(count);
+});
+          </code>
+          </pre>
+	</section>
+        <section class="slide">
+          <h2>
+            Интеграция с JavaScript runtime
+          </h2>
+          <a href="http://elm-lang.org/guide/interop">Elm interop guide</a>
+          <pre class="miltiline-code">
+          <code class="javascript">
+var div = document.getElementById('elm-stamps');
+var stamps = Elm.embed(Elm.Stamps, div, { reset:[] });</code><code class="javascript selected-line">stamps.ports.reset.send([]);</code><code class="javascript">stamps.ports.count.subscribe(function(count) {
+  console.log(count);
+});
+          </code>
+          </pre>
+	</section>
+        <section class="slide">
+          <h2>
+            Интеграция с JavaScript runtime
+          </h2>
+          <a href="http://elm-lang.org/guide/interop">Elm interop guide</a>
+          <pre class="miltiline-code">
+          <code class="javascript">
+var div = document.getElementById('elm-stamps');
+var stamps = Elm.embed(Elm.Stamps, div, { reset:[] });
+stamps.ports.reset.send([]);</code><code class="javascript selected-line">stamps.ports.count.subscribe(function(count) {
+  console.log(count);
+});</code>
+          </pre>
+	</section>
+
+
+
 
         <section class="slide">
           <h2>
@@ -763,14 +835,11 @@ stamps.ports.count.subscribe(function(count) {
           <h2>
             Как начать?
           </h2>
-          <p>Вам не нужно переписывать проект или начинать его с нуля</p>
-          <p>Вы можете интегрировать Elm в существующий проект, написав критичные элементы на нем</p>
-          <p>Ничего не мешает вам попробовать его уже сегодня</p>
-          <a href="http://elm-lang.org/examples/mario">Mario example</a>
-	</section>
-
-
-
+          <p><a href="http://elm-lang.org/docs">http://elm-lang.org/docs</a></p>
+          <p><a href="http://elm-lang.org/try">http://elm-lang.org/try</a></p>
+          <p><a href="http://elm-lang.org/examples/mario">Mario example</a></p>
+          <p><a href="http://debug.elm-lang.org/try">Time travel debugger example</a></p>
+        </section>
 
         <section class="slide">
           <h2>
