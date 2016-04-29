@@ -6,7 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/material/styles/screen-16x10.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+        <link rel="stylesheet" href="highlight/styles/default.css">
         <style>
           .float-right {
             text-align: right;
@@ -34,11 +34,21 @@
              height: 120px;
              float: right;
           }
+          h2.angular-title {
+            position: relative;
+          }
+          h2.angular-title img {
+            position: absolute;
+            right: 0px;
+          }
         </style>
 
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script src="highlight/highlight.pack.js"></script>
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+</script>
 <body class="shower list">
 	<header class="caption">
 		<h1>Куда мы все катимся?</h1>
@@ -75,7 +85,7 @@
 	<section class="slide">
 		<h2>Когда-то давно все было просто</h2>
                 <pre class="miltiline-code">
-                <code class="javascript xml">
+                <code class="lang-javascript lang-xml">
 &lt;script type="text/javascript"&gt;
   $(document).ready(function() {
     $(".fancybox").fancybox();
@@ -132,7 +142,6 @@
 &lt;script type="text/javascript"&gt;
   $.get("ajax/test.html", function(data) {
     $(".result").html(data);
-    alert("Load was performed.");
   });
 &lt;/script&gt;
                 </code>
@@ -143,7 +152,6 @@
                 <pre class="miltiline-code">
                 <code class="javascript xml">
 &lt;script type="text/javascript"&gt;</code><code class="javascript xml selected-line">  $.get("ajax/test.html", function(data) {</code><code class="javascript xml">    $(".result").html(data);
-    alert("Load was performed.");
   });
 &lt;/script&gt;
                 </code>
@@ -154,8 +162,7 @@
                 <pre class="miltiline-code">
                 <code class="javascript xml">
 &lt;script type="text/javascript"&gt;
-  $.get("ajax/test.html", function(data) {</code><code class="javascript xml selected-line">    $(".result").html(data);</code><code class="javascript xml">    alert("Load was performed.");
-  });
+  $.get("ajax/test.html", function(data) {</code><code class="javascript xml selected-line">    $(".result").html(data);</code><code class="javascript xml">  });
 &lt;/script&gt;
                 </code>
                 </pre>
@@ -272,7 +279,7 @@
           </ul>
 	</section>
         <section class="slide">
-          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+          <h2 class="angular-title">AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
           <ul>
             <li>Больше логики и структуры</li>
             <li>Все включено</li>
@@ -281,9 +288,8 @@
 	</section>
 
 	<section class="slide">
-          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
-                <pre class="miltiline-code angular">
-                <code class="angular javascript xml">&lt;!doctype html&gt;
+          <h2 class="angular-title">AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+                <pre class="miltiline-code angular"><code class="angular javascript">&lt;!doctype html&gt;
 &lt;html ng-app&gt;
   &lt;head&gt;
     &lt;script src=&quot;scripts/angular.1.5.3.min.js&quot;&gt;&lt;/script&gt;
@@ -302,11 +308,11 @@
 	</section>
 
 	<section class="slide">
-          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+          <h2 class="angular-title">AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
                 <pre class="miltiline-code angular">
                 <code class="angular javascript xml">&lt;!doctype html&gt;
 &lt;html ng-app&gt;
-  &lt;head&gt;</code><code class="angular javascript xml selected-line">    &lt;script src=&quot;scripts/angular.1.5.3.min.js&quot;&gt;&lt;/script&gt;</code><code class="angular javascript xml">  &lt;/head&gt;
+  &lt;head&gt;</code><code class="angular javascript xml selected-line">    &lt;script src=&quot;scripts/angular.1.5.3.min.js&quot;&gt;&lt;/script&gt;</code><code class="angular javascript">  &lt;/head&gt;
   &lt;body&gt;
     &lt;div&gt;
       &lt;label&gt;Name:&lt;/label&gt;
@@ -321,7 +327,7 @@
 	</section>
 
 	<section class="slide">
-          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+          <h2 class="angular-title">AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
                 <pre class="miltiline-code angular">
                 <code class="angular javascript xml">&lt;!doctype html&gt;
 &lt;html ng-app&gt;
@@ -340,7 +346,7 @@
 	</section>
 
 	<section class="slide">
-          <h2>AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
+          <h2 class="angular-title">AngularJS <img class="title-image" src="pictures/angular.png"/></h2>
                 <pre class="miltiline-code angular">
                 <code class="angular javascript xml">&lt;!doctype html&gt;
 &lt;html ng-app&gt;
